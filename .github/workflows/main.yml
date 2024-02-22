@@ -1,8 +1,9 @@
-name: Publish Docker image
+name: Docker Build and Push
 
 on:
   push:
-    branches: ['main']
+    branches:
+      - main
 
 jobs:
   push_to_registry:
@@ -29,5 +30,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: |
+            DOCKER_USERNAME/shoes:latest
+            DOCKER_USERNAME/shoes:${{ github.sha }}
           labels: ${{ steps.meta.outputs.labels }}
