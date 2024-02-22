@@ -31,6 +31,6 @@ jobs:
           context: .
           push: true
           tags: |
-            your-dockerhub-username/shoes:latest
-            your-dockerhub-username/shoes:${{ github.sha }}
+            DOCKER_USERNAME/shoes:latest
+            DOCKER_USERNAME/shoes:${{ github.sha }}
           labels: ${{ steps.meta.outputs.labels }}
