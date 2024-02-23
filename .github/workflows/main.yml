@@ -33,4 +33,6 @@ jobs:
           tags: |
             kanwarsaad/shoes:latest
             kanwarsaad/shoes:${{ github.sha }}
+            DOCKER_USERNAME/shoes:v1.0
+            DOCKER_USERNAME/shoes:v1.1
           labels: ${{ steps.meta.outputs.labels }}
