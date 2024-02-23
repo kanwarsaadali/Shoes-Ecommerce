@@ -30,8 +30,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: |
-            kanwarsaad/shoes:latest
-            kanwarsaad/shoes:${{ github.sha }}
-            kanwarsaad/shoes:v1.0
+          tags: kanwarsaad/shoes:v1.0
           labels: ${{ steps.meta.outputs.labels }}
