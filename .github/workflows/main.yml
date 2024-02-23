@@ -23,7 +23,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@98669ae865ea3cffbcbaa878cf57c20bbf1c6c38
         with:
-          images: DOCKER_USERNAME/shoes
+          images: kanwarsaad/shoes
       
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
@@ -33,6 +33,6 @@ jobs:
           tags: |
             kanwarsaad/shoes:latest
             kanwarsaad/shoes:${{ github.sha }}
-            DOCKER_USERNAME/shoes:v1.0
-            DOCKER_USERNAME/shoes:v1.1
+            kanwarsaad/shoes:v1.0
+            # DOCKER_USERNAME/shoes:v1.1
           labels: ${{ steps.meta.outputs.labels }}
