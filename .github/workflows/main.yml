@@ -34,5 +34,4 @@ jobs:
             kanwarsaad/shoes:latest
             kanwarsaad/shoes:${{ github.sha }}
             kanwarsaad/shoes:v1.0
-            # DOCKER_USERNAME/shoes:v1.1
           labels: ${{ steps.meta.outputs.labels }}
